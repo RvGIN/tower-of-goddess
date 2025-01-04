@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>女神 400 速解</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body id='body'>
+  <div class="w-full border rounded-lg">
+    <div id="output" class="h-48 text-5xl flex justify-center items-center shadow border-b mb-6">
+      211
+    </div>
+    <div class="w-full">
+      <!-- empty Group -->
+      <div class="flex flex-col px-4 mb-6">
+        <div>
+          <fieldset class="flex flex-row justify-center">
+            <span class="text-4xl mr-2">空：</span>
+    
+            <div>
+              <input hidden type="radio" id="empty0" name="empty" value="0" oninput="calculate()"/>
+              <label name="emptylabel" for="empty0" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                0
+              </label>
+            </div>
+    
+            <div class="mx-8">
+              <input hidden type="radio" id="empty1" name="empty" value="1" oninput="calculate()"/>
+              <label name="emptylabel" for="empty1" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                1
+              </label>
+            </div>
+    
+            <div>
+              <input hidden type="radio" id="empty2" name="empty" value="2" oninput="calculate()"/>
+              <label name="emptylabel" for="empty2" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                2
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      
+      <!-- left Group -->
+      <div class="flex flex-col px-4 mb-6">
+        <div>
+          <fieldset class="flex flex-row justify-center">
+            <span class="text-4xl mr-2">左：</span>
+    
+            <div>
+              <input hidden type="radio" id="left0" name="left" value="0" oninput="calculate()"/>
+              <label name="leftlabel" for="left0" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                0
+              </label>
+            </div>
+    
+            <div class="mx-8">
+              <input hidden type="radio" id="left1" name="left" value="1" oninput="calculate()"/>
+              <label name="leftlabel" for="left1" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                1
+              </label>
+            </div>
+    
+            <div>
+              <input hidden type="radio" id="left2" name="left" value="2" oninput="calculate()"/>
+              <label name="leftlabel" for="left2" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                2
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      
+       <!-- center Group -->
+      <div class="flex flex-col px-4 mb-6">
+        <div>
+          <fieldset class="flex flex-row justify-center">
+            <span class="text-4xl mr-2">中：</span>
+    
+            <div>
+              <input hidden type="radio" id="center0" name="center" value="0" oninput="calculate()"/>
+              <label name="centerlabel" for="center0" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                0
+              </label>
+            </div>
+    
+            <div class="mx-8">
+              <input hidden type="radio" id="center1" name="center" value="1" oninput="calculate()"/>
+              <label name="centerlabel" for="center1" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                1
+              </label>
+            </div>
+    
+            <div>
+              <input hidden type="radio" id="center2" name="center" value="2" oninput="calculate()"/>
+              <label name="centerlabel" for="center2" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                2
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      
+      <!-- right Group -->
+      <div class="flex flex-col px-4 mb-6">
+        <div>
+          <fieldset class="flex flex-row justify-center">
+            <span class="text-4xl mr-2">右：</span>
+    
+            <div>
+              <input hidden type="radio" id="right0" name="right" value="0" oninput="calculate()"/>
+              <label name="rightlabel" for="right0" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                0
+              </label>
+            </div>
+    
+            <div class="mx-8">
+              <input hidden type="radio" id="right1" name="right" value="1" oninput="calculate()"/>
+              <label name="rightlabel" for="right1" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                1
+              </label>
+            </div>
+    
+            <div>
+              <input hidden type="radio" id="right2" name="right" value="2" oninput="calculate()"/>
+              <label name="rightlabel" for="right2" onclick="callback(this)" class="text-4xl bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded">
+                2
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="/tower-of-goddess/src/js/main.js"></script>
+</body>
+</html>
