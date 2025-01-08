@@ -1,4 +1,8 @@
 function callback(el) {
+  if (window.calculateTimeout) {
+    clearTimeout(window.calculateTimeout);
+  }
+
   let labelGroups = body.querySelectorAll(`[name="${el.getAttribute('name')}"]`)
   Array.from(labelGroups).forEach(el => {
     el.className = "md:text-4xl text-xl bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
@@ -6,7 +10,7 @@ function callback(el) {
 
   el.className = "md:text-4xl text-xl bg-blue-500 font-semibold text-white py-2 px-4 border border-blue-500 rounded"
 
-  setTimeout(() => { calculate() }, 300);
+  window.calculateTimeout = setTimeout(() => { calculate() }, 300);
 }
 
 function calculate() {
