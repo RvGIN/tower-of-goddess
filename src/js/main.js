@@ -5,6 +5,8 @@ function callback(el) {
   })
 
   el.className = "md:text-4xl text-xl bg-blue-500 font-semibold text-white py-2 px-4 border border-blue-500 rounded"
+
+  setTimeout(() => { calculate() }, 300);
 }
 
 function calculate() {
